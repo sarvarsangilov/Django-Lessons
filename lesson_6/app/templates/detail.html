@@ -4,7 +4,10 @@
     <div class="col-md-8">
       <h3 class="pb-4 mb-4 fst-italic border-bottom">{{ post.title }}</h3>
       <article class="blog-post">
+        
+
         <p class="blog-post-meta">{{ post.creadet_at }}</a></p>
+        <img src="{{ post.image.url }}" class="img-fluid" alt="...">
         <p>{{ post.body }}</p>
       </article>
       <nav class="blog-pagination" aria-label="Pagination">
