@@ -1,0 +1,29 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container px-4 py-5" id="featured-3">
+  <h2 class="pb-2 border-bottom">Yangiliklar</h2>
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+    {% for post in posts %}
+    <div class="col">
+      <div class="card">
+        <div class="card-image-wrapper">
+          <img
+            src="{{ post.image.url }}"
+            class="card-img-top img-fluid"
+            alt="..."
+          />
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{ post.title }}</h5>
+          <p class="card-text">
+            {{ post.body }}
+          </p>
+          <a href="{% url 'post_detail' post.id %}" class="btn btn-primary">Davomi...</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+
+  </div>
+
+  {% endblock %}
+</div>
